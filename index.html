@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etiquetador de Metadatos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Etiquetador de Metadatos</h1>
+        <p>Sube tu archivo original y la versión editada para restaurar los metadatos.</p>
+        
+        <div class="file-section">
+            <label for="originalFile">Archivo Original (con metadatos)</label>
+            <input type="file" id="originalFile" accept="audio/*">
+            <span id="originalFileName" class="file-name">Ningún archivo seleccionado</span>
+        </div>
+        
+        <div class="file-section">
+            <label for="editedFile">Archivo Editado (sin metadatos)</label>
+            <input type="file" id="editedFile" accept="audio/*">
+            <span id="editedFileName" class="file-name">Ningún archivo seleccionado</span>
+        </div>
+        
+        <button id="restoreButton" disabled>Restaurar Metadatos</button>
+        
+        <div id="status"></div>
+        <a id="downloadLink" style="display:none;">Descargar Archivo Restaurado</a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jsmediatags@3.9.7/dist/jsmediatags.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/id3-writer@2.1.2/dist/id3-writer.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
+
+
